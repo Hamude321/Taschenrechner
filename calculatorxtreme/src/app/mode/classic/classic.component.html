@@ -1,0 +1,49 @@
+<!-- Header -->
+<app-header class="app-header"></app-header>
+
+<div id="FullContainer" #container class="container">
+    <!-- Top Container: Input + Output -->
+  <div class="top-container">
+      <ion-textarea class="input-container" placeholder="{{userInputDisplay()}}" [disabled]="true" fill="solid"></ion-textarea>
+      <output class="output-container"> {{endResult()}} </output>
+  </div>
+
+  <!-- Bottom Container: Symbol + Number + Operator -->
+  <div class="bottom-container">
+      <!-- Symbol Container -->
+      <div class="symbol-container">
+          <button class="symbol AC" (click)="clearDisplay()">AC</button>
+          <button class="symbol DEL" (click)="removeLastInput()">DEL</button>
+          <button class="symbol" (click)="resultToPercentage()">%</button>
+          <button class="symbol"><-</button>
+          <button class="symbol">-></button>
+      </div>
+
+      <!-- Number + Operator  -->
+      <div class="lower-container">
+          <!-- Number Container -->
+          <div class="number-container">
+              <button class="number" (click)="appendUserInput('7')">7</button>
+              <button class="number" (click)="appendUserInput('8')">8</button>
+              <button class="number" (click)="appendUserInput('9')">9</button>
+              <button class="number" (click)="appendUserInput('4')">4</button>
+              <button class="number" (click)="appendUserInput('5')">5</button>
+              <button class="number" (click)="appendUserInput('6')">6</button>
+              <button class="number" (click)="appendUserInput('1')">1</button>
+              <button class="number" (click)="appendUserInput('2')">2</button>
+              <button class="number" (click)="appendUserInput('3')">3</button>
+              <button class="number zero" (click)="appendUserInput('0')">0</button>
+              <button class="number" (click)="appendUserInput('.')">.</button>
+          </div>
+
+          <!-- Operator Container -->
+          <div class="operator-container">
+              <button class="operator" (click)="appendUserInput('/')">÷</button>
+              <button class="operator" (click)="appendUserInput('*')">×</button>
+              <button class="operator" (click)="appendUserInput('-')">−</button>
+              <button class="operator" (click)="appendUserInput('+')">+</button>
+              <button class="operator" (click)="calculateResult()">=</button>
+          </div>
+      </div>
+  </div>
+</div>

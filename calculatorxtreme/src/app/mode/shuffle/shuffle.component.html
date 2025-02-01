@@ -1,0 +1,6 @@
+<!-- Header -->
+<app-header></app-header>
+
+<ng-container *ngFor = "let num of numbers()" (click)="shuffleButtons()">
+    <ion-button>{{num}}</ion-button>
+</ng-container>

@@ -1,0 +1,154 @@
+#FullContainer {
+    display: flex;
+    flex-direction: column; 
+    width: 70%;  
+    height: 100vh; 
+    margin: 0 auto; 
+    background: var(--ion-color-success-contrast);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+  }
+  
+  /* Input and Output */
+  .top-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; 
+    padding: 10px;
+  }
+  
+  /* Input */
+  .input-container {
+    width: 80%;
+    height: 1rem;
+    --background: var(--ion-color-light); 
+    --color: var(--ion-color-dark-contrast-rgb); 
+    font-size: 1.5rem; 
+    text-align: center;
+  }
+  
+  /* Output */
+  .output-container {
+    font-size: 1.5rem;
+    color: white;
+    background-color: var(--ion-color-success-contrast);
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    width: 80%;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* Bottom container */
+  .bottom-container {
+    flex-grow: 2;  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  /* Symbol */
+  .symbol-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .symbol {
+    padding: 20px;
+    font-size: 1.5rem;
+    background-color: var(--ion-color-medium-tint); 
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;   
+  }
+
+  .symbol:hover {
+    background-color: var(--ion-color-medium);
+  }
+
+  .DEL, .AC {
+    background-color: var(--ion-color-danger);
+  }
+
+  .DEL:hover,.AC:hover{
+    background-color: var(--ion-color-danger-shade);
+  }
+  
+  /* Numbers and Operators */
+  .lower-container {
+    display: flex;
+    width: 100%;
+  }
+  
+  /* Number */
+  .number-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 70%;
+  }
+  
+  /* Operator */
+  .operator-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    width: 30%;
+    margin-left: 10px; 
+  }
+  
+  .number,
+  .operator {
+    padding: 20px;
+    font-size: 1.5rem;
+    background-color: var(--ion-color-light); 
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .number:hover {
+    background-color: var(--ion-color-medium); 
+  }
+  
+  .operator {
+    background-color: var(--ion-color-warning-shade);
+  }
+  
+  .operator:hover {
+    background-color: var(--ion-color-warning-tint); 
+  }
+  
+  // For smaller screens
+  @media (max-width: 768px) {
+    .app-header{
+      display: none;
+    }
+    #FullContainer{
+      width: 100%;
+    }
+    
+    .input-container,
+    .output-container {
+      width: 90%;
+    }
+  
+    .symbol-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+    .number-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  

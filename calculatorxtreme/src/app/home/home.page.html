@@ -1,0 +1,37 @@
+<!-- Header -->
+<app-header></app-header>
+
+<!-- Main Container -->
+<ion-content fullscreen class="main-container">
+  <ion-button *ngIf="debug" routerLink="/test">Testbutton</ion-button>
+  <div class="main-container-div">
+    <h1>Select a Mode:</h1>
+    <p>Classic or play a game and compete with others</p>
+  </div>
+  <!-- <div class="mode-selection-container">
+    <ion-img routerLink = "/classic" src="assets/modes/classic.png" alt="Classic Mode" class="mode-image"></ion-img>
+    <ion-img routerLink = "/shuffle" src="assets/modes/shuffle.png" alt="Shuffle Mode" class="mode-image"></ion-img>
+  </div> -->
+  <div class="mode-selection-container">
+    <ng-container *ngFor="let mode of modes">
+      <div class="mode-item">
+        <ion-img 
+          class="mode-image"
+          [routerLink]="mode.route"
+          [src]="mode.imageUrl">
+        </ion-img>
+        <p class="mode-name">{{mode.name}}</p>
+      </div>
+    </ng-container>
+  </div>
+</ion-content>
+
+<!-- Footer -->
+ <ion-footer>
+  <ion-toolbar class="footer-toolbar">
+    <ion-buttons slot="start">
+      <ion-button fill="clear">placeholder</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+ </ion-footer>
+
