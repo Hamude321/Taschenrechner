@@ -7,15 +7,15 @@ export const routes: Routes = [
   },
   {
     path: 'classic',
-    loadComponent: () => import('./mode/classic/classic.component').then((m) => m.ClassicComponent),
+    loadComponent: () => import('./components/mode/classic/classic.component').then((m) => m.ClassicComponent),
   },
   {
     path: 'shuffle',
-    loadComponent: () => import('./mode/shuffle/shuffle.component').then((m) => m.ShuffleComponent),
+    loadComponent: () => import('./components/mode/shuffle/shuffle.component').then((m) => m.ShuffleComponent),
   },
   {
     path: 'test',
-    loadComponent: () => import('./mode/test/test.component').then((m) => m.TestComponent),
+    loadComponent: () => import('./components/mode/test/test.component').then((m) => m.TestComponent),
   },
   
   {
