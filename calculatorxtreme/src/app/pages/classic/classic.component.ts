@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnInit, Signal, signal, WritableSignal } from '@angular/core';
 import { IonButton, IonTextarea } from '@ionic/angular/standalone';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from 'src/app/components/header/header.component';
@@ -12,14 +12,14 @@ import * as math from 'mathjs';
 })
 export class ClassicComponent  implements OnInit {
   // numbers: string[] = ['7', '8', '9', '4', '5', '6', '1', '2', '3', '0', '.'];
-  isPercentage = false;
-  userInputDisplay = signal('');
-  endResult = signal('0');
+  isPercentage : boolean = false
+  userInputDisplay : WritableSignal<string> = signal('')
+  endResult : WritableSignal<string> = signal('0')
 
   // Adds the last user input to the string that is going to be calculated
-  appendUserInput(userInput:string){
-  const currentValue = this.userInputDisplay().toString();
-  const lastChar = currentValue[currentValue.length - 1];
+  appendUserInput(userInput : string){
+  const currentValue = this.userInputDisplay().toString()
+  const lastChar = currentValue[currentValue.length - 1]
 
   // Check if current input is logical to avoid mathematical errors
   if ((currentValue === '' && !/\d/.test(userInput)) || (!/\d/.test(lastChar) && !/\d/.test(userInput))) {
@@ -30,7 +30,7 @@ export class ClassicComponent  implements OnInit {
 
   // Remove last user input
   removeLastInput(){
-    this.userInputDisplay.update((val) => val.slice(0, -1));
+    this.userInputDisplay.update((val) => val.slice(0, -1))
   }
 
   // Calculates final result 

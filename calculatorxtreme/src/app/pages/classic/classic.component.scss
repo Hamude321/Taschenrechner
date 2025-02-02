@@ -1,3 +1,7 @@
+:host {
+  background-color: rgb(16, 11, 11);
+}
+
 #FullContainer {
     display: flex;
     flex-direction: column; 
@@ -6,7 +10,7 @@
     margin: 0 auto; 
     background: var(--ion-color-success-contrast);
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
     border-radius: 10px;
   }
   

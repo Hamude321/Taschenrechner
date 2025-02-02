@@ -1,5 +1,5 @@
 export type mode = {
-    name : string;
-    route : string;
-    imageUrl : string;
+    name : string
+    route : string
+    imageUrl : string
 }

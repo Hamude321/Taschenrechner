@@ -3,19 +3,19 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: 'home',
-    loadComponent: () => import('./home/home.page').then((m) => m.HomePage),
+    loadComponent: () => import('./pages/home/home.page').then((m) => m.HomePage),
   },
   {
     path: 'classic',
-    loadComponent: () => import('./components/mode/classic/classic.component').then((m) => m.ClassicComponent),
+    loadComponent: () => import('./pages/classic/classic.component').then((m) => m.ClassicComponent),
   },
   {
     path: 'shuffle',
-    loadComponent: () => import('./components/mode/shuffle/shuffle.component').then((m) => m.ShuffleComponent),
+    loadComponent: () => import('./pages/shuffle/shuffle.component').then((m) => m.ShuffleComponent),
   },
   {
     path: 'test',
-    loadComponent: () => import('./components/mode/test/test.component').then((m) => m.TestComponent),
+    loadComponent: () => import('./pages/testpage/test.component').then((m) => m.TestComponent),
   },
   
   {

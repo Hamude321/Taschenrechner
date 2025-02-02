@@ -1,10 +1,25 @@
 // Header
 .header-toolbar {
-    --background: var(--ion-color-success);
+    --background: linear-gradient(90deg,#1f0021 , #751006);
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
   }
   
   .logo {
     height: 40px;
     margin-left: 15px;
+  }
+
+  .logo:hover{
+    cursor: pointer;
+  }
+
+  .header-button{
+    font-size: 1.5rem;
+    --color: var(--ion-color-primary-contrast);
+  }
+
+  @media (max-width: 768px) {
+    .header-button{
+      font-size: 1rem;  
+    }
   }

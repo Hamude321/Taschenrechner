@@ -10,11 +10,7 @@ import { IonButton, IonButtons, IonContent, IonFooter, IonHeader, IonImg, IonTit
   imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonButton,IonButtons, RouterLink,IonImg,IonFooter, CommonModule],
 })
 export class TestComponent  implements OnInit {
-  modes = [
-    { id: 'classic', name: 'Classic Mode', image: 'assets/modes/classic.png', route: '/classic' },
-    { id: 'shuffle', name: 'Shuffle Mode', image: 'assets/modes/shuffle.png', route: '/shuffle' },
-    // Add more modes as needed
-  ];
+  
   constructor() { }
 
   ngOnInit() {}
